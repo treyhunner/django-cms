@@ -1,5 +1,4 @@
 {% load i18n adminmedia %}
-{% include "cms/inc/csrf_js.html" %}
 <script type="text/javascript">
     //<![CDATA[
     // When jQuery is sourced, it's going to overwrite whatever might be in the
@@ -7,6 +6,7 @@
     var _$ = window.$;
     var _jQuery = window.jQuery;
 </script>
+{% include "cms/inc/csrf_js.html" %}
 <script type="text/javascript" src="{% admin_media_prefix %}js/jquery.min.js"></script>
 <script type="text/javascript">
     //<![CDATA[
@@ -23,6 +23,7 @@
 	})(jQuery);
 	//]]>
 </script>
+<script type="text/javascript" src="{{ CMS_MEDIA_URL }}js/csrf.js"></script> 
 <script type="text/javascript" src="{{ CMS_MEDIA_URL }}js/lib/jquery.cookie.js"></script> 
 <script type="text/javascript" src="{{ CMS_MEDIA_URL }}js/lib/jquery.backgroundposition.js"></script> 
 <script type="text/javascript" src="{{ CMS_MEDIA_URL }}js/tools.js"></script>

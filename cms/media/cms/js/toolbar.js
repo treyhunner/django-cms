@@ -12,9 +12,9 @@ function hide_iframe(){
 
 jQuery(document).ready(function($) {
 	
-	jQuery.fn.cmsPatchCSRF()
+	$.fn.cmsPatchCSRF()
 
-    jQuery.fn.swapWith = function(to) {
+    $.fn.swapWith = function(to) {
         return this.each(function() {
             var copy_to = $(to).clone(true);
             var copy_from = $(this).clone(true);
@@ -183,7 +183,6 @@ jQuery(document).ready(function($) {
         $(".cms_toolbar_submenubutton").removeClass("open");
     }
 
-    $(document).ready(function () {
         bodyBackgroundPos = $("body").css("background-position");            
         if (bodyBackgroundPos == 'undefined' || bodyBackgroundPos == null) {
             //for IE
@@ -429,5 +428,4 @@ jQuery(document).ready(function($) {
             hideCMStoolbarSubmenus();
             return false;
         });
-    });
 });
